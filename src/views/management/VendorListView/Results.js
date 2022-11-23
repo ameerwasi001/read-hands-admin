@@ -157,7 +157,9 @@ function Results({ className, customers, updateUser, ...rest }) {
                     </TableCell>
                     <TableCell style={{padding:'1px'}} align="left">{customer?.fullname}</TableCell>
                     <TableCell style={{padding:'1px'}} align="left" title="mailto"><a href={`mailto:${customer?.email}`} className={classes.mailColor}>{customer?.email}</a></TableCell>
-                    <TableCell style={{padding:'1px'}} align="center">{customer?.accountId}</TableCell>
+                    <TableCell style={{padding:'1px'}} align="center">
+                      {customer?.accountId ? <a href={`https://dashboard.stripe.com/test/connect/accounts/${customer?.accountId}/activity`}>{customer?.accountId}</a> : ''}
+                    </TableCell>
                     <TableCell style={{padding:'1px'}} align="center">{customer?.heldAmount}</TableCell>
                     <TableCell style={{padding:'1px'}} align="center">{customer?.gender}</TableCell>
                     <TableCell style={{padding:'1px'}} align="center">{customer?.age}</TableCell>

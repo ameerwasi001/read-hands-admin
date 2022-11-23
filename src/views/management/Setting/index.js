@@ -59,7 +59,7 @@ function UserListView() {
       <Container maxWidth={false}>
         <Header />
         {
-          admin['role'] === 'Admin' ?
+          admin['accountType'] === 'admin' ?
           <Box>
             {(admin && staff) && (
               <Box mt={3}>

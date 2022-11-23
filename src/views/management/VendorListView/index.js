@@ -39,7 +39,7 @@ function UserListView() {
   }
 
   return (
-    <Page className={classes.root} title="No Left Over Ever - Vendors">
+    <Page className={classes.root} title="Ready Hand - Vendors">
       <Container maxWidth={false}>
         <Header />
         {users && (
